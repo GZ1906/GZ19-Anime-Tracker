@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Tracker</title>
+    <link rel="shortcut icon" type="image" href="AT.png" />
+
+    <!-- Rest of the existing CSS remains the same -->
+    <style>
+              /* Default (Light Mode) */
+              :root {
+                  --background-color: #efeeeb;
+                  --header-background: #50C878;
+                  --text-color: #333;
+                  --entry-background: #FFF;
+                  --entry-border: #ddd;
+                  --button-background: #355E3B;
+                  --button-text-color: #fff;
+              }
+
+              /* Dark Mode Variables */
+              .dark-mode {
+                  --background-color: #333;
+                  --header-background: #222;
+                  --text-color: #f4f4f4;
+                  --entry-background: #444;
+                  --entry-border: #555;
+                  --button-background: #444;
+                  --button-text-color: #f4f4f4;
+              }
+
+              /* Common Styles */
+              body {
+                  font-family: Arial, sans-serif;
+                  background-color: var(--background-color);
+                  color: var(--text-color);
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  padding: 20px;
+                  transition: background-color 0.3s, color 0.3s;
+              }
+              header {
+                  background-color: var(--header-background);
+                  color: var(--button-text-color);
+                  padding: 20px;
+                  text-align: center;
+                  width: 100%;
+                  max-width: 770px;
+                  border-radius: 8px;
+                  margin-bottom: 15px;
+                  position: relative;
+              }
+              header h1 {
+                  margin: 0;
+                  font-size: 2em;
+              }
+              header p {
+                  margin: 10px 0 0;
+                  font-size: 1em;
+              }
+
+              .toggle-button {
+                  background-color: var(--button-background);
+                  color: var(--button-text-color);
+                  border: none;
+                  padding: 10px 20px;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  position: absolute;
+                  bottom: 10px;
+                  right: 10px;
+                  transition: background-color 0.3s, color 0.3s;
+              }
+
+              .anime-database {
+                  max-width: 800px;
+                  width: 100%;
+              }
+              .anime-entry {
+                  background-color: var(--entry-background);
+                  border: 1px solid var(--entry-border);
+                  border-radius: 8px;
+                  padding: 15px;
+                  margin-top: 7px;
+                  margin-bottom: 20px;
+                  display: flex;
+                  align-items: flex-start;
+                  transition: background-color 0.3s, border-color 0.3s;
+              }
+              .anime-entry img {
+                  width: 135px;        /* Consistent width for all images */
+                  height: 200px;       /* Fixed height to maintain consistent aspect ratio */
+                  object-fit: cover;   /* Ensures the image is cropped to fit the container */
+                  border-radius: 5px;
+                  margin-right: 20px;
+              }
+              .anime-info {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  flex-grow: 1;
+              }
+              .anime-info h3 {
+                  margin: 0;
+                  font-size: 1.2em;
+              }
+              .anime-info p {
+                  margin: 5px 0;
+                  font-size: 1em;
+              }
+              .pagination {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin-top: 10px;
+              }
+              .pagination button {
+                  padding: 5px 10px;
+                  margin: 0 5px;
+                  cursor: pointer;
+                  background-color: var(--button-background);
+                  color: var(--button-text-color);
+                  border: none;
+                  border-radius: 5px;
+              }
+              .page-info {
+                  margin: 0 10px;
+              }
+              .last-updated {
+                  position: fixed;
+                  bottom: 10px;
+                  right: 10px;
+                  font-size: 0.9em;
+                  background-color: var(--entry-background);
+                  color: var(--text-color);
+                  padding: 5px 10px;
+                  border-radius: 5px;
+                  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+                  transition: background-color 0.3s, color 0.3s;
+              }
+              .popup-container {
+      position: fixed; /* Keeps the popup in place on the screen */
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%); /* Centers the message horizontally */
+      z-index: 9999; /* Make sure the popup appears above other content */
+      }
+
+      .popup-message {
+      display: none; /* Hidden initially */
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      }
+
+              @media (max-width: 800px) {
+               .anime-entry img {
+                   width: 135px;
+                   height: 210px;
+                   object-fit: cover;
+                   border-radius: 5px;
+                   margin-right: 15px;
+               }
+
+               .anime-info h3 {
+                   font-size: 0.85em;
+               }
+
+               .anime-info p {
+                  margin: 5px 0;
+                  font-size: 0.65em;
+              }
+
+               .pagination button {
+                   padding: 4px 8px;
+               }
+
+              @media (max-width: 600px) {
+               .anime-entry img {
+                   width: 135px;
+                   height: 210px;
+                   object-fit: cover;
+                   border-radius: 5px;
+                   margin-right: 15px;
+               }
+
+               .anime-info h3 {
+                   font-size: 0.85em;
+               }
+
+               .anime-info p {
+                  margin: 5px 0;
+                  font-size: 0.65em;
+              }
+
+               .pagination button {
+                   padding: 4px 8px;
+               }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Zuriel's Anime Watchlist</h1>
+      <p>A collection of anime I have watched :)</p>
+      <button class="toggle-button" onclick="toggleTheme()">Toggle Mode</button>
+    </header>
+
+    <div class="anime-database">
+      <div class="search-bar">
+        <label for="search">Search by Name: </label>
+        <input
+          type="text"
+          id="search"
+          oninput="debouncedSearch()"
+          placeholder="Search animes..."
+        />
+      </div>
+      <p></p>
+      <label for="sort">Sort by:</label>
+      <select id="sort" onchange="sortAnime()">
+        <option value="name-asc">Name (A-Z)</option>
+        <option value="name-desc">Name (Z-A)</option>
+        <option value="season-new">Season (Newest First)</option>
+        <option value="season-old">Season (Oldest First)</option>
+      </select>
+
+      <div id="anime-list"></div>
+      <div class="pagination">
+        <button onclick="prevPage()">Previous</button>
+        <span class="page-info" id="page-info">Page 1</span>
+        <button onclick="nextPage()">Next</button>
+      </div>
+    </div>
+
+    <div class="popup-container">
+      <span class="popup-message"
+        >You can click on the image to go to their respective MAL(My Anime List)
+        page.</span
+      >
+    </div>
+
+    <div class="last-updated" id="last-updated">
+      Last updated: <span id="update-date">January 24, 2025</span>
+    </div>
+
+    <script>
+      window.onload = function () {
+        const popupMessage = document.querySelector(".popup-message");
+
+        // Display the message as soon as the page loads
+        popupMessage.style.display = "block";
+
+        // Hide the message after 3 seconds
+        setTimeout(function () {
+          popupMessage.style.display = "none";
+        }, 4500);
+      };
+
+      function scaleToggleButton() {
+        const toggleButton = document.querySelector(".toggle-button");
+
+        // Get the viewport width
+        const viewportWidth = window.innerWidth;
+
+        // Dynamically set padding and font size based on viewport width
+        if (viewportWidth < 400) {
+          toggleButton.style.padding = "3px 5px"; // Smaller screens
+          toggleButton.style.fontSize = "0.45em";
+          toggleButton.style.right = "5px";
+          toggleButton.style.bottom = "5px";
+        } else if (viewportWidth < 600) {
+          toggleButton.style.padding = "5px 7px";
+          toggleButton.style.fontSize = "0.55em";
+        } else {
+          toggleButton.style.padding = "7px 17px"; // Default for mid-sized and larger screens
+          toggleButton.style.fontSize = "0.8em";
+        }
+      }
+
+      // Call scaleToggleButton on load and resize
+      window.addEventListener("load", scaleToggleButton);
+      window.addEventListener("resize", scaleToggleButton);
+
+      function scaleLastUpdated() {
+        const lastUpdated = document.getElementById("last-updated");
+
+        // Get the viewport width
+        const viewportWidth = window.innerWidth;
+
+        // Dynamically set font size based on viewport width
+        if (viewportWidth < 400) {
+          lastUpdated.style.fontSize = "0.5em"; // Smaller screens
+          lastUpdated.style.padding = "3px 6px";
+        } else if (viewportWidth < 600) {
+          lastUpdated.style.fontSize = "0.7em";
+          lastUpdated.style.padding = "3px 8px";
+        } else if (viewportWidth < 800) {
+          lastUpdated.style.fontSize = "0.8em"; // Default for mid-sized screens
+          lastUpdated.style.padding = "4px 10px";
+        } else {
+          lastUpdated.style.fontSize = "0.9em"; // Larger screens
+          lastUpdated.style.padding = "5px 13px";
+        }
+      }
+
+      // Call scaleLastUpdated on load and resize
+      window.addEventListener("load", scaleLastUpdated);
+      window.addEventListener("resize", scaleLastUpdated);
+
+      // Theme toggle function
+      function toggleTheme() {
+        document.body.classList.toggle("dark-mode");
+        const isDarkMode = document.body.classList.contains("dark-mode");
+        localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+      }
+
+      // Retrieve and set the theme from local storage
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+      }
+
+      // Global variables
+      let animeData = []; // Original data
+      let filteredData = []; // Separate array for filtered results
+      const entriesPerPage = 10;
+      let currentPage = 1;
+      let totalPages = 0;
+
+      // Fetch anime data from JSON file
+      async function fetchAnimeData() {
+        try {
+          const response = await fetch("animeData.json");
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+          animeData = await response.json();
+          filteredData = [...animeData]; // Initialize filtered data
+          updatePagination();
+          generateAnimeList(); // Initial render after data is loaded
+        } catch (error) {
+          console.error("Error fetching anime data:", error);
+          document.getElementById("anime-list").innerHTML =
+            "<p>Error loading anime data. Please try again later.</p>";
+        }
+      }
+
+      // Update pagination based on current filtered data
+      function updatePagination() {
+        totalPages = Math.ceil(filteredData.length / entriesPerPage);
+        currentPage = Math.min(currentPage, totalPages);
+        if (currentPage < 1) currentPage = 1;
+      }
+
+      // Existing utility functions
+      function getSeasonValue(season) {
+        const seasonMap = {
+          winter: 1,
+          spring: 2,
+          summer: 3,
+          fall: 4,
+        };
+
+        const [seasonName, year] = season.toLowerCase().split(" ");
+        return {
+          seasonNumber: seasonMap[seasonName] || 0,
+          year: parseInt(year, 10),
+        };
+      }
+
+      // Generate anime list function
+      function generateAnimeList() {
+        const animeList = document.getElementById("anime-list");
+        animeList.innerHTML = ""; // Clear existing entries
+
+        const startIndex = (currentPage - 1) * entriesPerPage;
+        const endIndex = Math.min(
+          startIndex + entriesPerPage,
+          filteredData.length
+        );
+
+        for (let i = startIndex; i < endIndex; i++) {
+          const anime = filteredData[i];
+          const animeEntry = document.createElement("div");
+          animeEntry.classList.add("anime-entry");
+          animeEntry.setAttribute("data-name", anime.name);
+          animeEntry.setAttribute("data-season", anime.season);
+
+          let episodeText = "";
+
+          if (anime.episodes === 1) {
+            episodeText = "<strong>Movie</strong>";
+          } else if (
+            typeof anime.episodes === "string" &&
+            anime.episodes.toLowerCase().includes("s")
+          ) {
+            let episodeCount = anime.episodes.replace("s", "").trim();
+            episodeText =
+              episodeCount === "1"
+                ? `Episode: <strong>${episodeCount} (Special)</strong>`
+                : `Episodes: <strong>${episodeCount} (Special)</strong>`;
+          } else if (typeof anime.episodes === "number") {
+            episodeText = `Episodes: <strong>${anime.episodes}</strong>`;
+          }
+
+          animeEntry.innerHTML = `
+        <a href="${anime.link || "#"}" target="_blank">
+          <img src="${anime.image}" alt="${anime.name}">
+        </a>
+        <div class="anime-info">
+          <h3>${anime.name}</h3>
+          <p>Japanese Name: <strong>${anime.japaneseName}</strong></p>
+          <p>Genre: <em>${anime.genre}</em></p>
+          <p>${episodeText}</p>
+          <p>Season: <strong>${anime.season}</strong></p>
+        </div>
+      `;
+
+          animeList.appendChild(animeEntry);
+        }
+
+        document.getElementById(
+          "page-info"
+        ).textContent = `Page ${currentPage} of ${totalPages}`;
+      }
+
+      // Sorting function
+      function sortAnime() {
+        const sortValue = document.getElementById("sort").value;
+        currentPage = 1;
+
+        // Create a new array for sorting to avoid modifying the original
+        filteredData = [...filteredData];
+
+        if (sortValue === "name-asc") {
+          filteredData.sort((a, b) => {
+            const nameA = a.name.replace(/['"]/g, "").toLowerCase();
+            const nameB = b.name.replace(/['"]/g, "").toLowerCase();
+            return nameA.localeCompare(nameB);
+          });
+        } else if (sortValue === "name-desc") {
+          filteredData.sort((a, b) => {
+            const nameA = a.name.replace(/['"]/g, "").toLowerCase();
+            const nameB = b.name.replace(/['"]/g, "").toLowerCase();
+            return nameB.localeCompare(nameA);
+          });
+        } else if (sortValue === "season-new") {
+          filteredData.sort((a, b) => {
+            const seasonA = getSeasonValue(a.season);
+            const seasonB = getSeasonValue(b.season);
+
+            if (seasonA.year === seasonB.year) {
+              return seasonB.seasonNumber - seasonA.seasonNumber;
+            }
+            return seasonB.year - seasonA.year;
+          });
+        } else if (sortValue === "season-old") {
+          filteredData.sort((a, b) => {
+            const seasonA = getSeasonValue(a.season);
+            const seasonB = getSeasonValue(b.season);
+
+            if (seasonA.year === seasonB.year) {
+              return seasonA.seasonNumber - seasonB.seasonNumber;
+            }
+            return seasonA.year - seasonB.year;
+          });
+        }
+
+        generateAnimeList();
+      }
+
+      // Page navigation functions
+      function nextPage() {
+        if (currentPage < totalPages) {
+          currentPage++;
+          generateAnimeList();
+        }
+      }
+
+      function prevPage() {
+        if (currentPage > 1) {
+          currentPage--;
+          generateAnimeList();
+        }
+      }
+
+      // Improved search function with debounce
+      const debouncedSearch = debounce(() => {
+        const searchValue = document
+          .getElementById("search")
+          .value.toLowerCase()
+          .trim();
+
+        if (searchValue === "") {
+          // Reset to original data if search is cleared
+          filteredData = [...animeData];
+        } else {
+          // Filter the original data, not the filtered data
+          filteredData = animeData.filter(
+            (anime) =>
+              anime.name.toLowerCase().includes(searchValue) ||
+              anime.japaneseName.toLowerCase().includes(searchValue)
+          );
+        }
+
+        updatePagination();
+        generateAnimeList();
+      }, 300);
+
+      // Debounce helper function
+      function debounce(func, wait) {
+        let timeout;
+        return function (...args) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+      }
+
+      // Initialize the app
+      document.addEventListener("DOMContentLoaded", fetchAnimeData);
+    </script>
+  </body>
+</html>
