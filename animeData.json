@@ -1189,11 +1189,20 @@
   },
   {
     "name": "Skip to Loafer",
-    "japaneseName": "スキップとローファー ",
+    "japaneseName": "スキップとローファー",
     "genre": "Drama",
     "episodes": "12",
     "season": "Spring 2023",
     "image": "Image/Skip to Loafer.jpg",
     "link": "https://myanimelist.net/anime/50416/Skip_to_Loafer"
+  },
+    {
+    "name": "Demon Lord 2099",
+    "japaneseName": "魔王2099 ",
+    "genre": "Action, Fantacy, Sci-Fi",
+    "episodes": "12",
+    "season": "Fall 2024",
+    "image": "Image/Demon Lord 2099.jpg",
+    "link": "https://myanimelist.net/anime/54853/Maou_2099"
   }
 ]
