@@ -1196,13 +1196,22 @@
     "image": "Image/Skip to Loafer.jpg",
     "link": "https://myanimelist.net/anime/50416/Skip_to_Loafer"
   },
-    {
+  {
     "name": "Demon Lord 2099",
-    "japaneseName": "魔王2099 ",
+    "japaneseName": "魔王2099",
     "genre": "Action, Fantacy, Sci-Fi",
     "episodes": "12",
     "season": "Fall 2024",
     "image": "Image/Demon Lord 2099.jpg",
     "link": "https://myanimelist.net/anime/54853/Maou_2099"
-  }
+  },
+  {
+  "name": "I'm the Villainess, So I'm Taming the Final Boss",
+    "japaneseName": "悪役令嬢なのでラスボスを飼ってみました",
+    "genre": "Comedy, Fantasy, Romance",
+    "episodes": "12",
+    "season": "Fall 2022",
+    "image": "Image/Aileen.jpg",
+    "link": "https://myanimelist.net/anime/49979/Akuyaku_Reijou_nanode_Last_Boss_wo_Kattemimashita?q=I%27m%20the%20vilainess&cat=anime"
+  },
 ]
