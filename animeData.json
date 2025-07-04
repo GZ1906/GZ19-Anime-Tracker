@@ -1298,7 +1298,7 @@
   {
     "name": "Seraph of the End: Vampire Reign",
     "japaneseName": "終わりのセラフ",
-    "genre": "Action, Vampire, Shounen, Fantasy, Drama, Military",
+    "genre": "Action, Drama, Fantasy, Military, Shounen, Vampire",
     "episodes": 12,
     "season": "Spring 2015",
     "image": "Image/Seraph of the End Vampire Reign.jpg",
@@ -1307,7 +1307,7 @@
   {
     "name": "I Parry Everything",
     "japaneseName": "俺は全てを【パリイ】する ～逆勘違いの世界最強は冒険者になりたい～",
-    "genre": "Adventure, Fantasy, Action",
+    "genre": "Action, Adventure, Fantasy",
     "episodes": 12,
     "season": "Summer 2024",
     "image": "Image/I Parry Everything.jpg",
@@ -1316,7 +1316,7 @@
   {
     "name": "Frieren: Beyond Journey's End",
     "japaneseName": "葬送のフリーレン",
-    "genre": "Shounen, Drama, Adventure, Fantasy",
+    "genre": "Adventure, Drama, Fantasy, Shounen",
     "episodes": 28,
     "season": "Winter 2023",
     "image": "Image/Frieren Beyond Journeys End.jpg",
@@ -1325,7 +1325,7 @@
   {
     "name": "Let This Grieving Soul Retire",
     "japaneseName": "嘆きの亡霊は引退したい",
-    "genre": "Adventure, Fantasy, Action",
+    "genre": "Action, Adventure, Fantasy",
     "episodes": 13,
     "season": "Fall 2024",
     "image": "Image/Let This Grieving Soul Retire.jpg",
@@ -1334,7 +1334,7 @@
   {
     "name": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
     "japaneseName": "新米オッサン冒険者、最強パーティに死ぬほど鍛えられて無敵になる。",
-    "genre": "Adventure, Fantasy, Action",
+    "genre": "Action, Adventure, Fantasy",
     "episodes": 12,
     "season": "Summer 2024",
     "image": "Image/The Ossan Newbie Adventurer Trained to Death by the Most Powerful Party Became Invincible.jpg",
@@ -1343,7 +1343,7 @@
   {
     "name": "Skeleton Knight in Another World",
     "japaneseName": "骸骨騎士様、只今異世界へお出掛け中",
-    "genre": "Isekai, Adventure, Fantasy, Action",
+    "genre": "Action, Adventure, Fantasy, Isekai",
     "episodes": 12,
     "season": "Spring 2022",
     "image": "Image/Skeleton Knight in Another World.jpg",
@@ -1352,7 +1352,7 @@
   {
     "name": "I'll Become a Villainess Who Goes Down in History",
     "japaneseName": "歴史に残る悪女になるぞ",
-    "genre": "Villainess, Romance, Fantasy, Comedy, Isekai, Shoujo",
+    "genre": "Comedy, Fantasy, Isekai, Romance, Shoujo, Villainess",
     "episodes": 13,
     "season": "Fall 2024",
     "image": "Image/Ill Become a Villainess Who Goes Down in History.jpg",
@@ -1361,7 +1361,7 @@
   {
     "name": "No Longer Allowed in Another World",
     "japaneseName": "異世界失格",
-    "genre": "Adventure, Fantasy, Comedy, Isekai, Parody",
+    "genre": "Adventure, Comedy, Fantasy, Isekai, Parody",
     "episodes": 12,
     "season": "Summer 2024",
     "image": "Image/No Longer Allowed in Another World.jpg",
@@ -1370,7 +1370,7 @@
   {
     "name": "A Returner's Magic Should Be Special",
     "japaneseName": "帰還者の魔法は特別です",
-    "genre": "Time Travel, School, Fantasy, Action",
+    "genre": "Action, Fantasy, School, Time Travel",
     "episodes": 12,
     "season": "Fall 2023",
     "image": "Image/A Returners Magic Should Be Special.jpg",
