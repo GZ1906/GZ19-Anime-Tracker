@@ -1303,5 +1303,86 @@
     "season": "?",
     "image": "AT.png",
     "link": "https://myanimelist.net"
+  },
+  {
+    "name": "Seraph of the End: Vampire Reign",
+    "japaneseName": "終わりのセラフ",
+    "genre": "Action, Vampire, Shounen, Fantasy, Drama, Military",
+    "episodes": 12,
+    "season": "Spring 2015",
+    "image": "Image/Seraph of the End Vampire Reign.jpg",
+    "link": "https://myanimelist.net/anime/26243/Owari_no_Seraph"
+  },
+  {
+    "name": "I Parry Everything",
+    "japaneseName": "俺は全てを【パリイ】する ～逆勘違いの世界最強は冒険者になりたい～",
+    "genre": "Adventure, Fantasy, Action",
+    "episodes": 12,
+    "season": "Summer 2024",
+    "image": "Image/I Parry Everything.jpg",
+    "link": "https://myanimelist.net/anime/57058/Ore_wa_Subete_wo_Parry_suru__Gyaku_Kanchigai_no_Sekai_Saikyou_wa_Boukensha_ni_Naritai"
+  },
+  {
+    "name": "Frieren: Beyond Journey's End",
+    "japaneseName": "葬送のフリーレン",
+    "genre": "Shounen, Drama, Adventure, Fantasy",
+    "episodes": 28,
+    "season": "Winter 2023",
+    "image": "Image/Frieren Beyond Journeys End.jpg",
+    "link": "https://myanimelist.net/anime/52991/Sousou_no_Frieren"
+  },
+  {
+    "name": "Let This Grieving Soul Retire",
+    "japaneseName": "嘆きの亡霊は引退したい",
+    "genre": "Adventure, Fantasy, Action",
+    "episodes": 13,
+    "season": "Fall 2024",
+    "image": "Image/Let This Grieving Soul Retire.jpg",
+    "link": "https://myanimelist.net/anime/58172/Nageki_no_Bourei_wa_Intai_shitai"
+  },
+  {
+    "name": "The Ossan Newbie Adventurer, Trained to Death by the Most Powerful Party, Became Invincible",
+    "japaneseName": "新米オッサン冒険者、最強パーティに死ぬほど鍛えられて無敵になる。",
+    "genre": "Adventure, Fantasy, Action",
+    "episodes": 12,
+    "season": "Summer 2024",
+    "image": "Image/The Ossan Newbie Adventurer Trained to Death by the Most Powerful Party Became Invincible.jpg",
+    "link": "https://myanimelist.net/anime/54913/Shinmai_Ossan_Boukensha_Saikyou_Party_ni_Shinu_hodo_Kitaerarete_Muteki_ni_Naru"
+  },
+  {
+    "name": "Skeleton Knight in Another World",
+    "japaneseName": "骸骨騎士様、只今異世界へお出掛け中",
+    "genre": "Isekai, Adventure, Fantasy, Action",
+    "episodes": 12,
+    "season": "Spring 2022",
+    "image": "Image/Skeleton Knight in Another World.jpg",
+    "link": "https://myanimelist.net/anime/48760/Gaikotsu_Kishi-sama_Tadaima_Isekai_e_Odekakechuu"
+  },
+  {
+    "name": "I'll Become a Villainess Who Goes Down in History",
+    "japaneseName": "歴史に残る悪女になるぞ",
+    "genre": "Villainess, Romance, Fantasy, Comedy, Isekai, Shoujo",
+    "episodes": 13,
+    "season": "Fall 2024",
+    "image": "Image/Ill Become a Villainess Who Goes Down in History.jpg",
+    "link": "https://myanimelist.net/anime/56228/Rekishi_ni_Nokoru_Akujo_ni_Naru_zo"
+  },
+  {
+    "name": "No Longer Allowed in Another World",
+    "japaneseName": "異世界失格",
+    "genre": "Adventure, Fantasy, Comedy, Isekai, Parody",
+    "episodes": 12,
+    "season": "Summer 2024",
+    "image": "Image/No Longer Allowed in Another World.jpg",
+    "link": "https://myanimelist.net/anime/52367/Isekai_Shikkaku"
+  },
+  {
+    "name": "A Returner's Magic Should Be Special",
+    "japaneseName": "帰還者の魔法は特別です",
+    "genre": "Time Travel, School, Fantasy, Action",
+    "episodes": 12,
+    "season": "Fall 2023",
+    "image": "Image/A Returners Magic Should Be Special.jpg",
+    "link": "https://myanimelist.net/anime/54852/Kikansha_no_Mahou_wa_Tokubetsu_desu"
   }
 ]
