@@ -1296,15 +1296,6 @@
     "link": "https://myanimelist.net/anime/59361/Kono_Kaisha_ni_Suki_na_Hito_ga_Imasu?q=can%20you%20keep&cat=anime"
   },
   {
-    "name": "To Be Added",
-    "japaneseName": "追加される",
-    "genre": "?",
-    "episodes": 19,
-    "season": "?",
-    "image": "AT.png",
-    "link": "https://myanimelist.net"
-  },
-  {
     "name": "Seraph of the End: Vampire Reign",
     "japaneseName": "終わりのセラフ",
     "genre": "Action, Vampire, Shounen, Fantasy, Drama, Military",
@@ -1384,5 +1375,14 @@
     "season": "Fall 2023",
     "image": "Image/A Returners Magic Should Be Special.jpg",
     "link": "https://myanimelist.net/anime/54852/Kikansha_no_Mahou_wa_Tokubetsu_desu"
+  },
+  {
+    "name": "To Be Added",
+    "japaneseName": "追加される",
+    "genre": "?",
+    "episodes": 19,
+    "season": "?",
+    "image": "AT.png",
+    "link": "https://myanimelist.net"
   }
 ]
