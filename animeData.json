@@ -1465,6 +1465,35 @@
     "season": "?",
     "image": "AT.png",
     "link": "https://myanimelist.net"
+  },
+  [
+  {
+    "name": "Sugar Apple Fairy Tale",
+    "japaneseName": "シュガーアップル・フェアリーテイル",
+    "genre": "Adventure, Drama, Fantasy, Romance, Visual Arts",
+    "episodes": 12,
+    "season": "Winter 2023",
+    "image": "Image/Top.jpg",
+    "link": "https://myanimelist.net/anime/49980/Sugar_Apple_Fairy_Tale"
+  },
+  {
+    "name": "Sugar Apple Fairy Tale Part 2",
+    "japaneseName": "シュガーアップル・フェアリーテイル",
+    "genre": "Adventure, Drama, Fantasy, Romance, Visual Arts",
+    "episodes": 12,
+    "season": "Summer 2023",
+    "image": "Image/Sugar Apple Fairy Tale Part 2.jpg",
+    "link": "https://myanimelist.net/anime/54842/Sugar_Apple_Fairy_Tale_Part_2"
+  },
+  {
+    "name": "Secrets of the Silent Witch",
+    "japaneseName": "サイレント・ウィッチ 沈黙の魔女の隠しごと",
+    "genre": "Fantasy, School",
+    "episodes": 13,
+    "season": "Summer 2025",
+    "image": "Image/Secrets of the Silent Witch.jpg",
+    "link": "https://myanimelist.net/anime/59459/Silent_Witch__Chinmoku_no_Majo_no_Kakushigoto"
   }
 ]
+
 
