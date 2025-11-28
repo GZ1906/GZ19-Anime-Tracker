@@ -1458,15 +1458,6 @@
     "link": "https://myanimelist.net/anime/57647/Uma_Musume__Pretty_Derby_-_Shin_Jidai_no_Tobira"
   },
   {
-    "name": "To Be Added",
-    "japaneseName": "追加される",
-    "genre": "?",
-    "episodes": 19,
-    "season": "?",
-    "image": "AT.png",
-    "link": "https://myanimelist.net"
-  },
-  {
     "name": "Sugar Apple Fairy Tale",
     "japaneseName": "シュガーアップル・フェアリーテイル",
     "genre": "Adventure, Drama, Fantasy, Romance, Visual Arts",
@@ -1492,8 +1483,18 @@
     "season": "Summer 2025",
     "image": "Image/Secrets of the Silent Witch.jpg",
     "link": "https://myanimelist.net/anime/59459/Silent_Witch__Chinmoku_no_Majo_no_Kakushigoto"
+  },
+  {
+    "name": "To Be Added",
+    "japaneseName": "追加される",
+    "genre": "?",
+    "episodes": 19,
+    "season": "?",
+    "image": "AT.png",
+    "link": "https://myanimelist.net"
   }
 ]
+
 
 
 
